@@ -1,1 +1,24 @@
-<p>inicio works!</p>
+<table class="table" *ngIf="ofertas">
+    <thead >
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Descripcion de la oferta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let oferta of this.ofertas">
+        <th scope="row">{{oferta.id}}</th>
+        <td>{{oferta.titulo}}</td>
+      </tr>
+      <tr>
+        <th scope="row">1</th>
+        <td>Programador Java</td>
+      </tr>
+      <tr>
+        <th scope="row">1</th>
+        <td>Programador Python</td>
+      </tr>
+    </tbody>
+
+  </table>
+  <div class="alert-danger"*ngif="!ofertas">No se encontraron ofertas</div>
